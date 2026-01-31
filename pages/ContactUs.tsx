@@ -18,29 +18,27 @@ const ContactUs: React.FC = () => {
     });
   };
 
-  const encode = (data: any) => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formData })
-    })
-      .then(() => {
-        setStatus('success');
-        setFormData({ firstName: '', lastName: '', email: '', subject: 'General Inquiry', message: '' });
-      })
-      .catch((error) => {
-        console.error(error);
-        setStatus('error');
-      });
+    const { firstName, lastName, email, subject, message } = formData;
+
+    const emailBody = `
+Name: ${firstName} ${lastName}
+Email: ${email}
+Subject: ${subject}
+
+Message:
+${message}
+    `.trim();
+
+    const mailtoUrl = `mailto:media@rozarioglobal.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+    window.location.href = mailtoUrl;
+
+    setStatus('success');
+    setFormData({ firstName: '', lastName: '', email: '', subject: 'General Inquiry', message: '' });
   };
 
   return (
@@ -59,9 +57,9 @@ const ContactUs: React.FC = () => {
                        <div className="w-16 h-16 bg-amber-500/20 text-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
                           <CheckCircle size={32} />
                        </div>
-                       <h4 className="text-2xl font-bold text-white mb-2">Message Sent</h4>
+                       <h4 className="text-2xl font-bold text-white mb-2">Email Client Opened</h4>
                        <p className="text-neutral-400">
-                         Thank you for reaching out. Our team will review your inquiry and get back to you shortly.
+                         We've prepared an email draft for you. Please review and click <strong>Send</strong> in your email application to complete the process.
                        </p>
                        <button 
                          onClick={() => setStatus('idle')}
@@ -74,11 +72,7 @@ const ContactUs: React.FC = () => {
                     <form 
                       className="space-y-6" 
                       onSubmit={handleSubmit}
-                      name="contact"
-                      method="post"
-                      data-netlify="true"
                     >
-                       <input type="hidden" name="form-name" value="contact" />
                        
                        <div className="grid grid-cols-2 gap-6">
                           <div>
