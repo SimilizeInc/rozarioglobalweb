@@ -40,19 +40,6 @@ const VentureCapital: React.FC = () => {
          </div>
        </div>
 
-       {/* Portfolio Mock */}
-       <div className="py-24 px-6 bg-black border-t border-neutral-800">
-          <div className="max-w-7xl mx-auto">
-             <h2 className="text-3xl font-bold mb-12">Select Portfolio</h2>
-             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-               {['TensorFlow.ai', 'BlockStream', 'DataBricks', 'AlgoC', 'NeuralNet', 'QuantumSoft', 'EdgeCompute', 'SkyNet'].map((p, i) => (
-                 <div key={i} className="h-32 bg-neutral-900 rounded-lg flex items-center justify-center border border-neutral-800 font-bold text-neutral-500 hover:text-white hover:border-amber-500 transition-all cursor-pointer">
-                   {p}
-                 </div>
-               ))}
-             </div>
-          </div>
-       </div>
     </div>
   )
 }
