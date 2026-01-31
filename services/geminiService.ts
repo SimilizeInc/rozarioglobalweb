@@ -2,8 +2,7 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { Insight } from "../types";
 
 // Initialize Gemini Client
-// Safely check for process.env to prevent crashes in browser environments
-const apiKey = (typeof process !== 'undefined' && process.env) ? process.env.API_KEY : '';
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 const ai = new GoogleGenAI({ apiKey: apiKey || 'demo-key' });
 
 export const fetchMarketInsights = async (): Promise<Insight[]> => {

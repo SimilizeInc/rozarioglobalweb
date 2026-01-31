@@ -46,8 +46,8 @@ const Technology: React.FC = () => {
              <div>[STREAM_02] LSE_L1: CONNECTED (Latency: 24ms)</div>
              <div>[STREAM_03] ALT_SAT_V2: PROCESSING BATCH 9942</div>
              <div>[STREAM_04] SENTIMENT_ENGINE: ANALYZING...</div>
-             <div className="mt-4 text-white">>> Cleaning and normalization protocols active.</div>
-             <div className="text-white">>> Time-series alignment complete.</div>
+             <div className="mt-4 text-white">{`>>`} Cleaning and normalization protocols active.</div>
+             <div className="text-white">{`>>`} Time-series alignment complete.</div>
            </div>
         </div>
       </div>
