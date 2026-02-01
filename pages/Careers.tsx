@@ -118,9 +118,6 @@ const Careers: React.FC = () => {
                 <p className="text-neutral-300 leading-relaxed mb-4">
                   Engineers are the heartbeat of Rozario Global. We don't just use software; we invent the distributed platforms that make the impossible routine.
                 </p>
-                <blockquote className="border-l-2 border-amber-500 pl-4 italic text-neutral-500">
-                  "It’s not just appreciation of the work, but knowing the difficulty of the work. Rozario Global understands engineers."
-                </blockquote>
               </Link>
 
                <Link to="/teams/quantitative-research" className="block group cursor-pointer hover:bg-neutral-800/30 p-4 -mx-4 rounded-xl transition-colors">

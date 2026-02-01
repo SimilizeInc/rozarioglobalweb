@@ -21,10 +21,10 @@ Mr. D’Rozario holds a Bachelor of Science in Software Engineering with a minor
 };
 
 const MILESTONES = [
-  { year: "2020", title: "Founded", desc: "Rozario Global opens the first office in SoHo with a core team of engineers and a cluster of GPUs." },
-  { year: "2025", title: "Global Expansion", desc: "Opened London and Hong Kong offices to trade 24/7 across Asian and European markets." },
-  { year: "2025", title: "Acquired 'Similize'", desc: "Launched proprietary satellite data ingestion pipeline, predicting crop yields before government reports. This strategic acquisition reinforced our quantitative edge." },
-  { year: "2026", title: "AUM Milestone", desc: "Surpassed significant assets under management benchmarks, cementing status as a tier-1 global quant firm." }
+  { year: "2020", title: "Founded Caltech Capital", desc: "Caltech Capital opens the first office in Midtown with a principal Portfolio Manager." },
+  { year: "2025", title: "Rozario Global Expansion", desc: "Opened London and Hong Kong offices to trade 24/7 across Asian and European markets." },
+  { year: "2025", title: "Licensed 'Similize IP’", desc: "Launched 100+ proprietary simulation models for data ingestion pipeline, and generating alpha. This strategic acquisition reinforced our quantitative edge." },
+  { year: "2026", title: "AUM Milestone", desc: "Surpassed significant assets under management benchmarks, cementing status as a global quant firm." }
 ];
 
 const About: React.FC = () => {
@@ -188,7 +188,7 @@ const About: React.FC = () => {
             {[
               { city: "New York", desc: "Global HQ & Trading" },
               { city: "London", desc: "European Markets" },
-              { city: "Hong Kong", desc: "Asia Pacific Trading" }
+              { city: "Hong Kong", desc: "Asia Pacific Markets" }
             ].map((loc, i) => (
               <div key={i} className="flex flex-col items-center group cursor-pointer">
                 <div className="w-16 h-16 bg-neutral-900 rounded-full flex items-center justify-center border border-neutral-800 group-hover:border-amber-500 group-hover:bg-amber-900/10 transition-all mb-4">

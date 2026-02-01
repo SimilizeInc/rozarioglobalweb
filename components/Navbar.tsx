@@ -40,7 +40,7 @@ const navItems: NavItem[] = [
     label: 'Insights', 
     path: '/insights',
     children: [
-       { label: 'Work & Careers', path: '/insights?category=Careers', desc: "Life inside Rozario Global." },
+       { label: 'WORK & CAREER', path: '/insights?category=Careers', desc: "Life inside Rozario Global." },
        { label: 'DATA SCIENCE', path: '/insights?category=Data%20Science', desc: "Technical deep dives." },
        { label: 'ENGINEERING', path: '/insights?category=Engineering', desc: "Building the platform." },
        { label: 'MARKETS & ECONOMY', path: '/insights?category=Markets', desc: "Global macro perspectives." },
