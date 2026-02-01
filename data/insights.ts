@@ -89,7 +89,7 @@ const STATIC_HIGHLIGHTS: Insight[] = [
 // Replaced potentially broken URLs with fresh Unsplash IDs
 const STOCK_IMAGES = [
   "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&auto=format&fit=crop", // Blockchain/Abstract
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", // Data Viz
+  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", // Data Visualization
   "https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=1200&auto=format&fit=crop", // Servers
   "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1200&auto=format&fit=crop", // Stock Tickers
   "https://images.unsplash.com/photo-1526304640152-d4619684e484?q=80&w=1200&auto=format&fit=crop", // Data Stream
