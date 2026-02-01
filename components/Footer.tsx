@@ -14,10 +14,10 @@ const Footer: React.FC = () => {
             We apply the scientific method to finance. By leveraging advanced data analysis, engineering, and machine learning, we seek to uncover value in the world's data.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="p-2 bg-neutral-900 rounded-full hover:bg-amber-600 hover:text-black transition-colors">
+            <a href="https://linkedin.com/company/rozarioglobal" target="_blank" rel="noopener noreferrer" className="p-2 bg-neutral-900 rounded-full hover:bg-amber-600 hover:text-black transition-colors">
               <Linkedin size={20} />
             </a>
-            <a href="#" className="p-2 bg-neutral-900 rounded-full hover:bg-amber-600 hover:text-black transition-colors">
+            <a href="https://x.com/rozarioglobal_" target="_blank" rel="noopener noreferrer" className="p-2 bg-neutral-900 rounded-full hover:bg-amber-600 hover:text-black transition-colors">
               <Twitter size={20} />
             </a>
           </div>
