@@ -28,10 +28,10 @@ const generateContent = (title: string) => `
 const CATEGORIES = ['Data Science', 'Engineering', 'Markets', 'Culture', 'Policy', 'Careers'];
 const AUTHORS = [
   { name: "Calvin D'Rozario", role: "Founder & CIO" },
-  { name: "James Chen", role: "CIO" },
-  { name: "Sarah Jenkins", role: "CTO" },
-  { name: "David Okafor", role: "Head of Data Science" },
-  { name: "Research Team", role: "Rozario Global" }
+  { name: "Data Science Team", role: "ROZARIO GLOBAL" }, // Was James Chen (CIO) -> Data Science Team
+  { name: "Market Team", role: "ROZARIO GLOBAL" }, // Was Sarah Jenkins (CTO) -> Market Team
+  { name: "Data Science Team", role: "ROZARIO GLOBAL" }, // Was David Okafor (Head of DS) -> Data Science Team
+  { name: "Research Team", role: "ROZARIO GLOBAL" }
 ];
 
 const STATIC_HIGHLIGHTS: Insight[] = [
@@ -53,11 +53,11 @@ const STATIC_HIGHLIGHTS: Insight[] = [
     category: "Engineering",
     summary: "How we utilize Field-Programmable Gate Arrays to process market data feeds in under 3 milliseconds.",
     content: generateContent("Hardware Acceleration"),
-    author: "Sarah Jenkins",
-    role: "CTO",
+    author: "Market Team",
+    role: "ROZARIO GLOBAL",
     timestamp: "Oct 20, 2024",
     readTime: "12 min read",
-    imageUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop"
+    imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
   },
   {
     id: "3",
@@ -65,8 +65,8 @@ const STATIC_HIGHLIGHTS: Insight[] = [
     category: "Data Science",
     summary: "Predicting agricultural commodity yields by analyzing spectral data from orbital satellites.",
     content: generateContent("Geospatial Alpha"),
-    author: "David Okafor",
-    role: "Head of Data Science",
+    author: "Data Science Team",
+    role: "ROZARIO GLOBAL",
     timestamp: "Oct 15, 2024",
     readTime: "6 min read",
     imageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop"
@@ -77,8 +77,8 @@ const STATIC_HIGHLIGHTS: Insight[] = [
     category: "Engineering",
     summary: "Decoding central bank minutes and earnings calls using transformer-based language models.",
     content: generateContent("Natural Language Processing"),
-    author: "James Chen",
-    role: "CIO",
+    author: "Data Science Team",
+    role: "ROZARIO GLOBAL",
     timestamp: "Oct 10, 2024",
     readTime: "9 min read",
     imageUrl: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1200&auto=format&fit=crop"
@@ -86,25 +86,26 @@ const STATIC_HIGHLIGHTS: Insight[] = [
 ];
 
 // Curated list of verified, high-availability Unsplash images
+// Replaced potentially broken URLs with fresh Unsplash IDs
 const STOCK_IMAGES = [
-  "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?q=80&w=1200&auto=format&fit=crop", // Abstract Digital/Blockchain
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", // Data Visualization
-  "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1200&auto=format&fit=crop", // Abstract Lines
-  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop", // Financial Chart
-  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop", // Cyberpunk City
-  "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop", // Architecture
-  "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop", // Team Working
-  "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1200&auto=format&fit=crop", // Stock Tickers
-  "https://images.unsplash.com/photo-1611974765270-ca12586343bb?q=80&w=1200&auto=format&fit=crop", // Trading Screens
-  "https://images.unsplash.com/photo-1526304640152-d4619684e484?q=80&w=1200&auto=format&fit=crop", // Data Stream
+  "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&auto=format&fit=crop", // Blockchain/Abstract
+  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop", // Data Viz
   "https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=1200&auto=format&fit=crop", // Servers
-  "https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1200&auto=format&fit=crop", // Abstract Purple
-  "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop", // Global Network
-  "https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=1200&auto=format&fit=crop", // Dark Server Room
-  "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1200&auto=format&fit=crop", // Code Screen
+  "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1200&auto=format&fit=crop", // Stock Tickers
+  "https://images.unsplash.com/photo-1526304640152-d4619684e484?q=80&w=1200&auto=format&fit=crop", // Data Stream
   "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop", // Circuit Board
-  "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop", // Business Meeting
-  "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop", // Digital Art
+  "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop", // Global Network
+  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop", // Cyberpunk City
+  "https://images.unsplash.com/photo-1509023464722-18d996393ca8?q=80&w=1200&auto=format&fit=crop", // Dark Server Room
+  "https://images.unsplash.com/photo-1516110833967-0b5716ca1387?q=80&w=1200&auto=format&fit=crop", // AI Brain
+  "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?q=80&w=1200&auto=format&fit=crop", // Tech Abstract
+  "https://images.unsplash.com/photo-1535320903710-d9cf303ffe45?q=80&w=1200&auto=format&fit=crop", // Server Lights
+  "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop", // Team Working
+  "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=1200&auto=format&fit=crop", // Meetings
+  "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop", // Handshake
+  "https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=1200&auto=format&fit=crop", // Dashboard
+  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop", // Charts
+  "https://images.unsplash.com/photo-1531297461136-82lw8u8d916?q=80&w=1200&auto=format&fit=crop", // Computer Chip
 ];
 
 // Generate 46 more insights to reach 50+
