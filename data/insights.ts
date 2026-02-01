@@ -36,6 +36,68 @@ const AUTHORS = [
 
 const STATIC_HIGHLIGHTS: Insight[] = [
   {
+    id: "0",
+    title: "SPECIAL REPORT: Market Fragility & Structural Indicators (Q1 2026)",
+    category: "Markets",
+    summary: "Why the \"Engineering\" data suggests a heightened probability of a liquidity event, regardless of the macroeconomic narrative.",
+    content: `
+      <p class="mb-6 text-lg leading-relaxed text-slate-300">
+        <strong>Executive Summary</strong><br/>
+        While the broader consensus remains focused on lagging macroeconomic indicators (CPI, employment data, Fed policy), our internal models are signaling a critical divergence in market microstructure.
+      </p>
+      <p class="mb-6 leading-relaxed text-slate-400">
+        From an engineering perspective, the US equity markets are currently exhibiting signs of "systems fragility"—a state where liquidity appears abundant on the surface but is structurally hollow underneath.
+      </p>
+      <p class="mb-6 leading-relaxed text-slate-400">
+        This report serves as a formal documentation of our current thesis: The structural probability of a significant correction or "liquidity gap" event in Q1 2026 has exceeded our internal safety thresholds. This is not a forecast based on intuition; it is a read-out of system stress.
+      </p>
+
+      <h3 class="text-2xl font-bold text-white mb-4">The "Hollow Structure" Phenomenon</h3>
+      <p class="mb-6 leading-relaxed text-slate-400">
+        In software engineering, a system can appear functional on the front end while the backend database is deadlocked. The interface responds, but no data is actually moving. We are seeing a financial equivalent of this today.
+      </p>
+      <p class="mb-6 leading-relaxed text-slate-400">
+        Our analysis suggests that current valuations are being sustained by algorithmic crowding rather than genuine capital depth. When too many passive and systematic strategies crowd into the same trade, they create a feedback loop that dampens volatility artificially—until it snaps.
+      </p>
+
+      <h3 class="text-2xl font-bold text-white mb-4">Key Structural Warnings</h3>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-slate-400">
+        <li><strong>Liquidity Mismatch:</strong> The ratio of "limit orders" (resting liquidity) to "market orders" (aggressive flow) has deteriorated to levels seen prior to previous flash events. This implies that if selling pressure accelerates, the "floor" may vanish faster than discretionary traders expect.</li>
+        <li><strong>Correlation Unity:</strong> Across varying asset classes, correlations are tightening. When distinct assets move in unison, it indicates that "liquidity" itself is the primary driver, not fundamentals. This is a classic precursor to a de-leveraging event.</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mb-4">The "Kill Switch" Environment</h3>
+      <p class="mb-6 leading-relaxed text-slate-400">
+        At Rozario Global, we utilize "Risk-First" architecture. We do not ask if the market should crash; we ask if the market has the capacity to absorb a shock. Currently, our metrics indicate that the market’s shock-absorption capacity is near historic lows.
+      </p>
+      <p class="mb-6 leading-relaxed text-slate-400">
+        The Catalyst is Secondary: Whether the trigger is a geopolitical headline, an earnings miss, or a policy error is structurally less important than the fragility itself. When the forest is dry enough, any spark can cause a fire.
+      </p>
+      <p class="mb-6 leading-relaxed text-slate-400">
+        The Speed of Correction: Due to the dominance of high-frequency and algorithmic execution, we anticipate that the next correction may not be a slow bleed, but a sharp, high-velocity "gap" event.
+      </p>
+
+      <h3 class="text-2xl font-bold text-white mb-4">Conclusion & Forward Guidance</h3>
+      <p class="mb-6 leading-relaxed text-slate-400">
+        We are currently positioning our portfolios defensively, relying on our proprietary "Gap Protection" protocols to seek to mitigate tail risk.
+      </p>
+      <p class="mb-6 leading-relaxed text-slate-400">
+        Investors relying on traditional 60/40 models or discretionary forecasting may find themselves exposed to speed and volatility that human reaction times cannot manage. We believe the coming weeks will demonstrate why algorithmic repeatability and engineered risk controls are a critical defense in a modernized market structure.
+      </p>
+      <blockquote class="border-l-4 border-amber-500 pl-6 my-8 italic text-slate-300">
+        This thesis is explored in greater technical detail in my upcoming book, which deconstructs the mechanics of modern liquidity crises. Further excerpts will be released to this page shortly.
+      </blockquote>
+      <p class="text-sm text-slate-500 mt-8 border-t border-slate-800 pt-4">
+        <em>Disclaimer: This report is for informational purposes only and does not constitute an offer to sell, a solicitation to buy, or a recommendation for any security, nor does it constitute an offer to provide investment advisory or other services by Rozario Global Management LLC. The views expressed herein represent the current opinion of the author and are based on data available as of the date of publication. These views are subject to change without notice. Certain statements herein may constitute "forward-looking statements," which involve known and unknown risks and uncertainties. Actual results may differ materially from those anticipated.</em>
+      </p>
+    `,
+    author: "Calvin D'Rozario",
+    role: "Founder & CIO",
+    timestamp: "Jan 31, 2026",
+    readTime: "10 min read",
+    imageUrl: "https://images.unsplash.com/photo-1611974765270-ca12586343bb?q=80&w=1200&auto=format&fit=crop" // Trading screens / Red charts
+  },
+  {
     id: "1",
     title: "The Stochastic Properties of Limit Order Books",
     category: "Data Science",
