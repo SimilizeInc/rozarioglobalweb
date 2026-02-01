@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { INSIGHTS_DATA } from '../data/insights';
-import { ArrowLeft, Clock, Share2, Linkedin, Twitter, Copy } from 'lucide-react';
+import { ArrowLeft, Clock, Share2, Linkedin, Twitter, Copy, Facebook } from 'lucide-react';
 
 const InsightDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -11,6 +11,27 @@ const InsightDetail: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
+
+  const handleShare = (platform: 'twitter' | 'linkedin' | 'facebook' | 'copy') => {
+    const url = window.location.href;
+    const title = insight?.title || 'Rozario Global Insight';
+
+    switch (platform) {
+      case 'twitter':
+        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`, '_blank');
+        break;
+      case 'linkedin':
+        window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`, '_blank');
+        break;
+      case 'facebook':
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+        break;
+      case 'copy':
+        navigator.clipboard.writeText(url);
+        // Could add a toast here
+        break;
+    }
+  };
 
   if (!insight) {
     return (
@@ -68,9 +89,8 @@ const InsightDetail: React.FC = () => {
             </div>
           </div>
           <div className="flex gap-4">
-            <button className="p-2 bg-neutral-900 rounded-full text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors"><Twitter size={18} /></button>
-            <button className="p-2 bg-neutral-900 rounded-full text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors"><Linkedin size={18} /></button>
-            <button className="p-2 bg-neutral-900 rounded-full text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors"><Share2 size={18} /></button>
+            <a href="https://x.com/rozarioglobal_" target="_blank" rel="noopener noreferrer" className="p-2 bg-neutral-900 rounded-full text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors"><Twitter size={18} /></a>
+            <a href="https://linkedin.com/company/rozarioglobal" target="_blank" rel="noopener noreferrer" className="p-2 bg-neutral-900 rounded-full text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors"><Linkedin size={18} /></a>
           </div>
         </div>
 
@@ -85,8 +105,24 @@ const InsightDetail: React.FC = () => {
           dangerouslySetInnerHTML={{ __html: insight.content }}
         />
 
-        {/* Tags / Footer of Article */}
+        {/* Share Section */}
         <div className="mt-16 pt-8 border-t border-neutral-800">
+          <h4 className="text-sm font-bold uppercase text-neutral-500 mb-6">Share this Perspective</h4>
+          <div className="flex gap-4 mb-12">
+             <button onClick={() => handleShare('twitter')} className="flex items-center gap-2 px-6 py-3 bg-neutral-900 rounded-full text-neutral-400 hover:bg-white hover:text-black transition-all font-medium text-sm">
+                <Twitter size={18} /> X (Twitter)
+             </button>
+             <button onClick={() => handleShare('linkedin')} className="flex items-center gap-2 px-6 py-3 bg-neutral-900 rounded-full text-neutral-400 hover:bg-[#0077b5] hover:text-white transition-all font-medium text-sm">
+                <Linkedin size={18} /> LinkedIn
+             </button>
+             <button onClick={() => handleShare('facebook')} className="flex items-center gap-2 px-6 py-3 bg-neutral-900 rounded-full text-neutral-400 hover:bg-[#1877F2] hover:text-white transition-all font-medium text-sm">
+                <Facebook size={18} /> Facebook
+             </button>
+             <button onClick={() => handleShare('copy')} className="flex items-center gap-2 px-6 py-3 bg-neutral-900 rounded-full text-neutral-400 hover:bg-amber-600 hover:text-white transition-all font-medium text-sm">
+                <Copy size={18} /> Copy Link
+             </button>
+          </div>
+
           <h4 className="text-sm font-bold uppercase text-neutral-500 mb-4">Related Topics</h4>
           <div className="flex flex-wrap gap-2">
             {['Algorithmic Trading', 'Machine Learning', 'Market Structure', 'Risk Management'].map(tag => (
