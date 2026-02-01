@@ -40,6 +40,43 @@ const VentureCapital: React.FC = () => {
          </div>
        </div>
 
+       {/* Focus Sectors */}
+       <div className="py-24 px-6 bg-black border-t border-neutral-800">
+          <div className="max-w-4xl mx-auto">
+             <div className="text-center mb-16">
+                <h2 className="text-3xl font-bold mb-6">Sector Focus</h2>
+                <p className="text-neutral-400 leading-relaxed text-lg">
+                   We invest where we have an edge. Our deep expertise in data science and financial technology allows us to identify undervalued assets in complex, technical verticals.
+                </p>
+             </div>
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="p-6 border border-neutral-800 rounded-xl bg-neutral-900/50">
+                    <div className="flex items-center gap-3 mb-4">
+                        <Database className="text-amber-500 shrink-0" size={24} />
+                        <h4 className="font-bold text-white text-lg">AI & ML</h4>
+                    </div>
+                    <p className="text-sm text-neutral-400 leading-relaxed">Foundational models, inference infrastructure, and vertical AI applications.</p>
+                </div>
+
+                <div className="p-6 border border-neutral-800 rounded-xl bg-neutral-900/50">
+                    <div className="flex items-center gap-3 mb-4">
+                        <Rocket className="text-amber-500 shrink-0" size={24} />
+                        <h4 className="font-bold text-white text-lg">DeFi & Web3</h4>
+                    </div>
+                    <p className="text-sm text-neutral-400 leading-relaxed">Decentralized protocols, tokenized assets, and blockchain scalability solutions.</p>
+                </div>
+
+                <div className="p-6 border border-neutral-800 rounded-xl bg-neutral-900/50">
+                    <div className="flex items-center gap-3 mb-4">
+                        <Code className="text-amber-500 shrink-0" size={24} />
+                        <h4 className="font-bold text-white text-lg">Dev Tools</h4>
+                    </div>
+                    <p className="text-sm text-neutral-400 leading-relaxed">Next-gen IDEs, CI/CD pipelines, and developer productivity platforms.</p>
+                </div>
+             </div>
+          </div>
+       </div>
+
     </div>
   )
 }

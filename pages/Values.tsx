@@ -9,7 +9,7 @@ const VALUES_DATA = [
     shortDesc: "We do what is right, not what is easy.",
     fullDesc: "Integrity is the bedrock of our firm. It is binary: you have it, or you don't. We adhere to the strictest ethical standards, protecting our investors' capital and our reputation with equal vigor. We believe that a single breach of trust undoes a decade of performance.",
     quote: "Character is revealed in the choices we make when the market turns against us.",
-    author: "Elena Rozario, Founder",
+    author: "Calvin D’Rozario, Founder & CIO",
     image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1600&auto=format&fit=crop" // Professional handshake/meeting
   },
   {
@@ -19,7 +19,7 @@ const VALUES_DATA = [
     shortDesc: "Accuracy over ego.",
     fullDesc: "In a meeting at Rozario Global, titles are left at the door. The best idea wins, regardless of tenure. We confront hard facts immediately. We dissect our failures with more enthusiasm than our successes, because that is where the learning happens.",
     quote: "The market is the ultimate truth-teller. We must be humble enough to listen.",
-    author: "James Chen, CIO",
+    author: "James Chen, Intern",
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1600&auto=format&fit=crop" // Diverse team at whiteboard
   },
   {
@@ -29,7 +29,7 @@ const VALUES_DATA = [
     shortDesc: "Good enough is failure.",
     fullDesc: "We strive for perfection in our code, our research, and our operations. We operate in a competitive zero-sum environment where the difference between winning and losing is measured in microseconds and basis points.",
     quote: "We don't compete with the market. We compete with our own potential.",
-    author: "Sarah Jenkins, CTO",
+    author: "Sarah Jenkins, Intern",
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop" // Intense coding/collaboration
   },
   {
@@ -189,7 +189,7 @@ const Values: React.FC = () => {
                </p>
                <div className="grid grid-cols-2 gap-8 mb-8">
                   <div>
-                     <div className="text-3xl font-bold text-white mb-1">300+</div>
+                     <div className="text-3xl font-bold text-white mb-1">100+</div>
                      <div className="text-sm text-neutral-500 uppercase tracking-wide">Students Mentored</div>
                   </div>
                   <div>
