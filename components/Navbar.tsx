@@ -197,7 +197,7 @@ const Navbar: React.FC = () => {
                         <div className="text-neutral-500 font-bold text-xs uppercase tracking-wider mb-2">{item.label}</div>
                          {item.children.map(child => (
                            <Link key={child.label} to={child.path} className="block pl-4 border-l border-neutral-800">
-                             <div className="text-white font-medium text-sm mb-1">{child.label}</div>
+                             <div className="text-white font-medium text-sm mb-1 uppercase">{child.label}</div>
                              <div className="text-neutral-600 text-xs">{child.desc}</div>
                            </Link>
                          ))}
