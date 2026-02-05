@@ -169,14 +169,14 @@ ${message}
                           <MapPin className="text-amber-500 shrink-0" />
                           <div>
                             <h4 className="font-bold text-lg text-white">London</h4>
-                            <p className="text-neutral-400">100 Bishopsgate<br/>London EC2M 1GT, UK</p>
+                            <p className="text-neutral-400">1 Principal Pl<br/>London EC2A 2BA, United Kingdom</p>
                           </div>
                        </div>
                        <div className="flex gap-4">
                           <MapPin className="text-amber-500 shrink-0" />
                           <div>
                             <h4 className="font-bold text-lg text-white">Hong Kong</h4>
-                            <p className="text-neutral-400">Two International Finance Centre<br/>8 Finance Street, Central, HK</p>
+                            <p className="text-neutral-400">Tower 535, 535 Jaffe Rd<br/>Causeway Bay, Hong Kong</p>
                           </div>
                        </div>
                     </div>
