@@ -26,6 +26,7 @@ import QuantitativeResearch from './pages/teams/QuantitativeResearch';
 import DataScience from './pages/teams/DataScience';
 import StrategyOperations from './pages/teams/StrategyOperations';
 import JobDetail from './pages/jobs/JobDetail';
+import EmailDisclaimer from './pages/EmailDisclaimer';
 
 const ScrollToTop: React.FC = () => {
   const { pathname, hash } = useLocation();
@@ -66,6 +67,7 @@ const App: React.FC = () => {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/legal" element={<LegalDisclosure />} />
           <Route path="/privacy-policies" element={<PrivacyPolicies />} />
+          <Route path="/email-disclaimer" element={<EmailDisclaimer />} />
           
           {/* New Pages */}
           <Route path="/technology" element={<Technology />} />
